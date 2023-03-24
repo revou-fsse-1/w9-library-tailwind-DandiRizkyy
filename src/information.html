@@ -12,10 +12,10 @@
     <div class="flex flex-col h-screen">
       <header>
         <nav class="bg-gray-800">
-          <div class="mx-auto px-2 max-w-xl">
+          <div class="mx-auto px-2 max-w-7xl sm:px-6 lg:px-8">
             <div class="relative h-16 flex items-center justify-between">
               <div
-                class="absolute flex left-0 items-center inset-y-0 bg-gray-800"
+                class="absolute flex left-0 sm:hidden items-center inset-y-0 bg-gray-800"
               >
                 <button
                   class="text-gray-300 p-2 hover:bg-gray-600 rounded-md"
@@ -58,7 +58,9 @@
                   </svg>
                 </button>
               </div>
-              <div class="flex justify-center flex-1">
+              <div
+                class="flex justify-center sm:justify-start sm:items-stretch flex-1"
+              >
                 <div class="flex items-center flex-shrink-0">
                   <img
                     class="h-8 w-auto block"
@@ -68,11 +70,24 @@
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
                   <div class="flex space-x-4">
-                    <a href="index.html" aria-current="page">Library</a>
+                    <a
+                      href="index.html"
+                      aria-current="page"
+                      class="p-2 text-gray-300 font-medium rounded-md text-sm px-3 hover:bg-gray-700 hover:text-white"
+                      >Library</a
+                    >
 
-                    <a href="books.html">Books</a>
+                    <a
+                      href="books.html"
+                      class="p-2 text-gray-300 font-medium rounded-md text-sm hover:bg-gray-700 hover:text-white"
+                      >Books</a
+                    >
 
-                    <a href="information.html">Information</a>
+                    <a
+                      href="information.html"
+                      class="p-2 text-white font-medium rounded-md text-sm bg-gray-900"
+                      >Information</a
+                    >
                   </div>
                 </div>
               </div>
@@ -84,17 +99,19 @@
               <a
                 href="index.html"
                 aria-current="page"
-                class="block text-white font-medium p-2"
+                class="block text-white font-medium hover:bg-gray-600 rounded-md p-2 hover:text-white"
                 >Library</a
               >
 
-              <a href="books.html" class="block text-white font-medium p-2"
+              <a
+                href="books.html"
+                class="block text-white hover:bg-gray-600 font-medium rounded-md p-2 hover:text-white"
                 >Books</a
               >
 
               <a
                 href="information.html"
-                class="block text-white font-medium bg-gray-900 rounded-md p-2"
+                class="block text-white bg-gray-900 font-medium p-2 rounded-md"
                 >Information</a
               >
             </div>
