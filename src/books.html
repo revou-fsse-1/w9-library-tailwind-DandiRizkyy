@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Tailwind</title>
 
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="/src/output.css" rel="stylesheet" />
   </head>
   <body>
     <div class="flex flex-col h-screen">
@@ -121,10 +121,156 @@
       <main
         class="flex-1 bg-library-2 bg-cover bg-no-repeat bg-center overflow-y-auto"
       >
-        <div
-          class="bg-slate-700 text-center mt-32 p-20 text-xl md:text-4xl lg:text-4xl font-bold text-white"
-        >
-          UNDER MAINTENANCE 🚧
+        <div class="flex flex-col px-3 py-3 sm:px-8 items-center">
+          <div
+            class="mx-auto container max-w-screen-xl sm:px-6 lg:px-8 rounded-md py-8 bg-gray-800"
+          >
+            <div class="text-center">
+              <nav aria-label="Page navigation example">
+                <ul class="inline-flex -space-x-px">
+                  <li>
+                    <a
+                      href="#"
+                      class="ml-0 leading-tight py-2 px-3 bg-gray-800 border border-gray-300 text-gray-400 rounded-l-lg hover:bg-gray-700 hover:text-white"
+                      onclick=""
+                      >Previous</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="?page=1"
+                      class="ml-0 leading-tight py-2 px-3 bg-gray-800 border border-gray-300 text-gray-400 hover:bg-gray-700 hover:text-white"
+                      >1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="?page=2"
+                      class="ml-0 leading-tight py-2 px-3 bg-gray-800 border border-gray-300 text-gray-400 hover:bg-gray-700 hover:text-white"
+                      >2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ml-0 leading-tight py-2 px-3 bg-gray-800 border border-gray-300 text-gray-400 rounded-r-lg hover:bg-gray-700 hover:text-white"
+                      onclick=""
+                      >Next</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 px-4 sm:px-0 gap-4 my-6"
+            >
+              <div
+                class="bg-gray-800 border border-gray-700 shadow w-full rounded-lg"
+              >
+                <a href="#">
+                  <img
+                    src="https://covers.openlibrary.org/b/id/13179392-L.jpg"
+                    alt="The Lord of the Rings: The Return of the Kings"
+                    class="mx-auto h-72"
+                  />
+                </a>
+                <div class="p-5">
+                  <a href="#">
+                    <h5
+                      class="text-2xl mb-2 font-bold tracking-tight text-white"
+                    >
+                      The Lord of the Rings: The Return of the Kings
+                    </h5>
+                  </a>
+                  <p class="font-normal mb-3 text-gray-400">
+                    <b>Author(s):</b> J.R.R. Tolkien
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-gray-800 border border-gray-700 shadow w-full rounded-lg"
+              >
+                <a href="#">
+                  <img
+                    src="https://covers.openlibrary.org/b/id/10587033-L.jpg"
+                    alt="The Lord of the Rings: The Fellowship of the Ring"
+                    class="mx-auto h-72"
+                  />
+                </a>
+                <div class="p-5">
+                  <a href="#">
+                    <h5
+                      class="text-2xl mb-2 font-bold tracking-tight text-white"
+                    >
+                      The Lord of the Rings: The Fellowship of the Ring
+                    </h5>
+                  </a>
+                  <p class="font-normal mb-3 text-gray-400">
+                    <b>Author(s):</b> J.R.R. Tolkien
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-gray-800 border border-gray-700 shadow w-full rounded-lg"
+              >
+                <a href="#">
+                  <img
+                    src="https://covers.openlibrary.org/b/id/10290014-L.jpg"
+                    alt="Lord of the Rings: The Two Towers v. 2"
+                    class="mx-auto h-72"
+                  />
+                </a>
+                <div class="p-5">
+                  <a href="#">
+                    <h5
+                      class="text-2xl mb-2 font-bold tracking-tight text-white"
+                    >
+                      Lord of the Rings: The Two Towers v. 2
+                    </h5>
+                  </a>
+                  <p class="font-normal mb-3 text-gray-400">
+                    <b>Author(s):</b> J.R.R. Tolkien
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <nav aria-label="Page navigation example">
+                <ul class="inline-flex -space-x-px">
+                  <li>
+                    <a
+                      href="#"
+                      class="ml-0 leading-tight py-2 px-3 bg-gray-800 border border-gray-300 text-gray-400 rounded-l-lg hover:bg-gray-700 hover:text-white"
+                      onclick=""
+                      >Previous</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="?page=1"
+                      class="ml-0 leading-tight py-2 px-3 bg-gray-800 border border-gray-300 text-gray-400 hover:bg-gray-700 hover:text-white"
+                      >1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="?page=2"
+                      class="ml-0 leading-tight py-2 px-3 bg-gray-800 border border-gray-300 text-gray-400 hover:bg-gray-700 hover:text-white"
+                      >2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ml-0 leading-tight py-2 px-3 bg-gray-800 border border-gray-300 text-gray-400 rounded-r-lg hover:bg-gray-700 hover:text-white"
+                      onclick=""
+                      >Next</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </main>
       <footer class="bg-gray-800 text-center p-3">
