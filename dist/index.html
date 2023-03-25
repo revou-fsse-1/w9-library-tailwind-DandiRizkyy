@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Tailwind</title>
+    <link
+      href="https://assets.website-files.com/61af164800e38c4f53c60b4e/61af164800e38cd504c60bad_RevoU%20favicon.svg"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="flex flex-col h-screen">
+      <header>
+        <nav class="bg-gray-800">
+          <div class="mx-auto px-2 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="relative items-center justify-between h-16 flex">
+              <div
+                class="absolute flex left-0 sm:hidden items-center inset-y-0 bg-gray-800"
+              >
+                <button
+                  class="text-gray-300 p-2 hover:bg-gray-600 rounded-md"
+                  id="m-menu-button"
+                  type="button"
+                  aria-controls="mobile-menu"
+                  aria-expanded="false"
+                  onclick="mobileMenuButton()"
+                >
+                  <span class="sr-only">Open main menu</span>
+                  <!-- closed menu -->
+                  <svg
+                    class="block h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                  <!-- opened menu -->
+                  <svg
+                    class="hidden w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="flex justify-center sm:justify-start sm:items-stretch flex-1"
+              >
+                <div class="flex items-center flex-shrink-0">
+                  <img
+                    class="h-8 w-auto block"
+                    src="https://assets.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg"
+                    alt="RevoU Library"
+                  />
+                </div>
+                <div class="hidden sm:ml-6 sm:block">
+                  <div class="flex space-x-4">
+                    <a
+                      href="index.html"
+                      aria-current="page"
+                      class="bg-gray-900 p-2 text-white font-medium rounded-md text-sm px-3"
+                      >Library</a
+                    >
+
+                    <a
+                      href="books.html"
+                      class="p-2 text-gray-300 font-medium rounded-md text-sm hover:bg-gray-700 hover:text-white"
+                      >Books</a
+                    >
+
+                    <a
+                      href="information.html"
+                      class="p-2 text-gray-300 font-medium rounded-md text-sm hover:bg-gray-700 hover:text-white"
+                      >Information</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="m-menu" class="hidden sm:hidden">
+            <div class="bg-gray-800 px-2 pt-2 space-y-1 pb-2">
+              <a
+                href="index.html"
+                aria-current="page"
+                class="block text-white font-medium bg-gray-900 rounded-md p-2"
+                >Library</a
+              >
+
+              <a
+                href="books.html"
+                class="block text-white hover:bg-gray-600 font-medium p-2 hover:text-white"
+                >Books</a
+              >
+
+              <a
+                href="information.html"
+                class="block text-white font-medium p-2 hover:bg-gray-600 hover:text-white"
+                >Information</a
+              >
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="flex-1 bg-library-1 bg-cover bg-no-repeat overflow-y-auto">
+        <div class="py-3 mt-5 flex flex-col px-4 items-center sm:px-8">
+          <div
+            class="container mb-10 mx-auto my-3 px-4 py-8 sm:px-6 lg:px-8 max-w-screen-md rounded-lg text-center bg-gray-800"
+          >
+            <h3 class="text-center text-gray-50 mb-4">
+              Welcome to RevoU Library! Use this search to find books quickly!
+            </h3>
+            <form class="mt-6 mb-6" id="search-form">
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  class="p-3 rounded-lg pl-10 bg-gray-600 text-white w-full"
+                  type="search"
+                  placeholder="Search"
+                  id="search"
+                />
+                <button
+                  type="submit"
+                  class="bg-sky-600 text-white rounded-lg p-1 px-3 absolute right-5 top-2 hover:bg-sky-700"
+                  onclick="loadLibrary()"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+            <div
+              id="search-result"
+              class="mx-auto container my-3 max-w-screen-md sm:px-6 lg:px-8 bg-gray-800 rounded-lg py-4 hidden"
+            >
+              <div class="my-6">
+                <a
+                  href="#"
+                  class="flex flex-col bg-gray-800 border border-gray-700 hover:bg-gray-700 p-4 shadow md:flex-row items-center"
+                >
+                  <img
+                    src="https://covers.openlibrary.org/b/id/10587033-L.jpg"
+                    alt="The Lord of the Rings: The Fellowship of the Ring"
+                    class="object-cover w-full rounded-lg h-96 md:h-auto md:w-24"
+                  />
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5
+                      class="mb-2 text-2xl font-bold tracking-tight text-white"
+                    >
+                      The Lord of the Rings: The Fellowship of the Ring
+                    </h5>
+                    <p class="mb-3 font-normal text-gray-400">
+                      <b>Author(s):</b>
+                      J.R.R. Tolkien
+                    </p>
+                    <caption>
+                      Subjects: Elves, Dwarves, evil, fear, friends
+                    </caption>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="flex flex-col items-center border p-4 shadow md:flex-row border-gray-700 bg-gray-800 hover:bg-gray-700"
+                >
+                  <img
+                    class="object-cover w-full rounded-lg h-96 md:h-auto md:w-24"
+                    src="https://covers.openlibrary.org/b/id/10290014-L.jpg"
+                    alt="Lord of the Rings: The Two Towers v. 2"
+                  />
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5
+                      class="mb-2 text-2xl font-bold tracking-tight text-white"
+                    >
+                      Lord of the Rings: The Two Towers v. 2
+                    </h5>
+                    <p class="mb-3 font-normal text-gray-400">
+                      <b>Author(s):</b>
+                      J.R.R. Tolkien
+                    </p>
+                    <caption>
+                      Subjects: Ents, Orcs, hobbits, magic, Ficción fantástica
+                      inglesa
+                    </caption>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="bg-gray-800 text-center p-3">
+        <p class="text-slate-100 text-sm">RevoU Library</p>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
