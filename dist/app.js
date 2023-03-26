@@ -13,7 +13,7 @@ function mobileMenuButton() {
   }
 }
 
-//fungsi load halaman pertama kali agar script search library jalan
+//fungsi yang ditaruh di tombol submit search untuk menajalankan fungsi search library
 function loadLibrary() {
   document
     .getElementById("search-form")
